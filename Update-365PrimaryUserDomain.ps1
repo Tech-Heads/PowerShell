@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Updates primary SMTP to user@exDomain.com from user.exDomain.onmicrosoft.com
+    Updates primary SMTP to user@exDomain.com from user@exDomain.onmicrosoft.com
 .DESCRIPTION
     This is used at clients with Office 365 with Azure AD Connect but no on prem exchange for managing exchange atributes.
     By default, all new users will have the .onmicrosoft domain as primary domain.  
@@ -17,9 +17,8 @@ Requires -RunAsAdministrator
 .PARAMETER $Domain
     Enter the domain name you want set as Primary for the user. 
     Ex. MyDomain 
-.REQUIRES
   .NOTES
-  Version:        1.0
+  Version:        1.2
   Author:         Randy Lobb
   Creation Date:  11/21/17
   ADDITIONAL REQUIREMENTS:None 
