@@ -1,4 +1,4 @@
-[CmdletBinding]<#
+<#
 .SYNOPSIS
     Updates primary SMTP to user@exDomain.com from user@exDomain.onmicrosoft.com
 .DESCRIPTION
