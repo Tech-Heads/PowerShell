@@ -1,4 +1,4 @@
-<#
+[CmdletBinding]<#
 .SYNOPSIS
     Updates primary SMTP to user@exDomain.com from user@exDomain.onmicrosoft.com
 .DESCRIPTION
@@ -23,7 +23,7 @@ Requires -RunAsAdministrator
   Creation Date:  11/21/17
   ADDITIONAL REQUIREMENTS:None 
 #>
-
+[CmdletBinding]
 function update-365PrimaryDomain 
 {
     # 
