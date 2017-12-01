@@ -5,7 +5,7 @@ Import-Module ActiveDirectory
 function update-365PrimaryDomain 
 {
     # Enter the OU holding the users you want to update 
-    # EX. OU=SBSUsers,OU=Users,OU=MyBusiness,DC=face2face,DC=local
+    # EX. OU=Users,OU=MyBusiness,DC=MyDomain,DC=local
     Parameter(
         Mandatory = $true, 
         ValueFromPipeline = $true, 
