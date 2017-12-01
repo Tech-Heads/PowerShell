@@ -16,7 +16,7 @@ $domain
 $users = Get-ADUser -SearchBase "$SelectedOU" -Filter *
 foreach ($user in $users)
 {
-$email = $user.samaccountname + '@ + $domain + .com'
+$email = $user.samaccountname + "@" + $domain + ".com"
 $newemail = "SMTP:"+$email
 Set-ADUser $user -Add @{proxyAddresses = ($newemail)}
 }
