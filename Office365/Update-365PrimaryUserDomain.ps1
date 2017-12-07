@@ -23,19 +23,16 @@ Requires -RunAsAdministrator
   Creation Date:  11/21/17
   ADDITIONAL REQUIREMENTS:None 
 #>
-[CmdletBinding]
 function update-365PrimaryDomain 
 {
-    # 
-    # EX. 
+    [CmdletBinding]
     Parameter(
         Mandatory = $true, 
         ValueFromPipeline = $true, 
         ValueFromPipelineByPropertyName = $true)
     [string]
     $SelectedOU
-
-    # Enter domain name
+    
     Parameter(Mandatory = $true)
     [string]
     $domain
@@ -48,7 +45,6 @@ function update-365PrimaryDomain
             continue}
         else {
             Set-ADUser $user -Add @{proxyAddresses = ($newemail)}
-            $user.samaccountname + "'s ProxyAddress has been updated to " + $newemail | Out-File c:\smtpupdateLOG.txt -Append
-        }
-    }
-}
+            $user.samaccountname + "'s ProxyAddress has been updated to " + $newemail | Out-File c:\smtpupdateLOG.txt -Append} 
+    } #closes foreach
+} 
