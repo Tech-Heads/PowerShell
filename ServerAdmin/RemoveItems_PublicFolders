@@ -1,0 +1,7 @@
+import-module ActiveDirectory
+Get-ADComputer -Filter * | %{If(Test-Connection -ComputerName $_.Name -Count 1 -Quiet){Remove-Item –path \\$($_.Name)\c$\users\public\ Remove-Item -include *.exe –recurse -whatIf}}
+ 
+# Here's something that will get all the machine names from AD, then ping them, and execute the remove- item command.  
+# take the -whatIf off the end after you have verified it won't delete anything important
+
+#Note, this needs to be ran from a domain joined machine that has the Active Directory tools installed
